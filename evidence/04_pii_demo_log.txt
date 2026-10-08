@@ -1,0 +1,29 @@
+Demo: PII Detection & Redaction (synthetic data)
+
+[Email] PASS
+  Input: Contact john.doe@example.com.
+  Output: Contact [EMAIL_REDACTED].
+
+[Phone] PASS
+  Input: Call (555) 867-5309.
+  Output: Call [PHONE_REDACTED].
+
+[SSN] PASS
+  Input: SSN: 123-45-6789
+  Output: SSN: [SSN_REDACTED]
+
+[Credit Card] PASS
+  Input: Card: 4532 1234 5678 9010
+  Output: Card: [CREDIT_CARD_REDACTED]
+
+[Multi-PII] PASS
+  Input: alice@example.com / 555-123-4567
+  Output: [EMAIL_REDACTED] / [PHONE_REDACTED]
+
+[Vietnam phone] PASS
+  Input: Phone: 0901234567
+  Output: Phone: [PHONE_REDACTED]
+
+[Clean] PASS
+  Input: No sensitive information here.
+  Output: No sensitive information here.
