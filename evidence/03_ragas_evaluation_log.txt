@@ -1,0 +1,119 @@
+↓ Đã pull 'dangthevinh-2a202602587-rag-prompt-v1' từ Hub | commit=7d395081803e7016cff79abdda8fe93ed2f0cc1dd1469e60286b860762d7ed4f
+↓ Đã pull 'dangthevinh-2a202602587-rag-prompt-v2' từ Hub | commit=30ab6de71871b9a542e0899df40bfc32aa6d91900fb3af1362d39467eda6ec45
+🔨 Đang tạo FAISS index từ 107 chunks ...
+✅ FAISS vectorstore đã sẵn sàng.
+[v1 01/50] What are the three main types of machine learning?
+[v1 02/50] What is overfitting in machine learning?
+[v1 03/50] Explain the bias-variance tradeoff.
+[v1 04/50] How does regularization prevent overfitting?
+[v1 05/50] What is cross-validation?
+[v1 06/50] What is backpropagation?
+[v1 07/50] What are Convolutional Neural Networks primarily used for?
+[v1 08/50] How do LSTM networks address the vanishing gradient problem?
+[v1 09/50] What activation functions are commonly used in neural networks?
+[v1 10/50] What is the role of pooling layers in CNNs?
+[v1 11/50] What is the transformer architecture?
+[v1 12/50] What are word embeddings?
+[v1 13/50] What is transfer learning in NLP?
+[v1 14/50] How does BERT handle language understanding?
+[v1 15/50] What is self-attention in transformers?
+[v1 16/50] What is GPT and how is it trained?
+[v1 17/50] What is instruction tuning?
+[v1 18/50] What is RLHF?
+[v1 19/50] What is chain-of-thought prompting?
+[v1 20/50] What is the context length of GPT-4?
+[v1 21/50] What is Retrieval-Augmented Generation?
+[v1 22/50] What are the main components of a RAG pipeline?
+[v1 23/50] What is dense retrieval?
+[v1 24/50] Why is chunking strategy important in RAG?
+[v1 25/50] What advanced RAG techniques exist beyond basic retrieval?
+[v1 26/50] What are vector databases used for?
+[v1 27/50] What is FAISS?
+[v1 28/50] How do text embeddings capture semantic meaning?
+[v1 29/50] What is HNSW?
+[v1 30/50] What is hybrid search in vector databases?
+[v1 31/50] What is LangChain?
+[v1 32/50] What is LangChain Expression Language (LCEL)?
+[v1 33/50] What is LangGraph?
+[v1 34/50] What memory types does LangChain support?
+[v1 35/50] What are LangChain retrievers?
+[v1 36/50] What is LangSmith?
+[v1 37/50] What information do LangSmith traces capture?
+[v1 38/50] What is the LangSmith Prompt Hub?
+[v1 39/50] How does LangSmith help monitor production LLM applications?
+[v1 40/50] What are LangSmith datasets used for?
+[v1 41/50] What is RAGAS?
+[v1 42/50] How does RAGAS compute faithfulness?
+[v1 43/50] What is answer relevancy in RAGAS?
+[v1 44/50] What is context recall in RAGAS?
+[v1 45/50] What inputs does RAGAS evaluation require?
+[v1 46/50] What is Guardrails AI?
+[v1 47/50] What is PII and why is it important to detect in LLM responses?
+[v1 48/50] What does structured output validation ensure?
+[v1 49/50] What is Constitutional AI?
+[v1 50/50] What are common AI safety concerns with LLMs?
+[v2 01/50] What are the three main types of machine learning?
+[v2 02/50] What is overfitting in machine learning?
+[v2 03/50] Explain the bias-variance tradeoff.
+[v2 04/50] How does regularization prevent overfitting?
+[v2 05/50] What is cross-validation?
+[v2 06/50] What is backpropagation?
+[v2 07/50] What are Convolutional Neural Networks primarily used for?
+[v2 08/50] How do LSTM networks address the vanishing gradient problem?
+[v2 09/50] What activation functions are commonly used in neural networks?
+[v2 10/50] What is the role of pooling layers in CNNs?
+[v2 11/50] What is the transformer architecture?
+[v2 12/50] What are word embeddings?
+[v2 13/50] What is transfer learning in NLP?
+[v2 14/50] How does BERT handle language understanding?
+[v2 15/50] What is self-attention in transformers?
+[v2 16/50] What is GPT and how is it trained?
+[v2 17/50] What is instruction tuning?
+[v2 18/50] What is RLHF?
+[v2 19/50] What is chain-of-thought prompting?
+[v2 20/50] What is the context length of GPT-4?
+[v2 21/50] What is Retrieval-Augmented Generation?
+[v2 22/50] What are the main components of a RAG pipeline?
+[v2 23/50] What is dense retrieval?
+[v2 24/50] Why is chunking strategy important in RAG?
+[v2 25/50] What advanced RAG techniques exist beyond basic retrieval?
+[v2 26/50] What are vector databases used for?
+[v2 27/50] What is FAISS?
+[v2 28/50] How do text embeddings capture semantic meaning?
+[v2 29/50] What is HNSW?
+[v2 30/50] What is hybrid search in vector databases?
+[v2 31/50] What is LangChain?
+[v2 32/50] What is LangChain Expression Language (LCEL)?
+[v2 33/50] What is LangGraph?
+[v2 34/50] What memory types does LangChain support?
+[v2 35/50] What are LangChain retrievers?
+[v2 36/50] What is LangSmith?
+[v2 37/50] What information do LangSmith traces capture?
+[v2 38/50] What is the LangSmith Prompt Hub?
+[v2 39/50] How does LangSmith help monitor production LLM applications?
+[v2 40/50] What are LangSmith datasets used for?
+[v2 41/50] What is RAGAS?
+[v2 42/50] How does RAGAS compute faithfulness?
+[v2 43/50] What is answer relevancy in RAGAS?
+[v2 44/50] What is context recall in RAGAS?
+[v2 45/50] What inputs does RAGAS evaluation require?
+[v2 46/50] What is Guardrails AI?
+[v2 47/50] What is PII and why is it important to detect in LLM responses?
+[v2 48/50] What does structured output validation ensure?
+[v2 49/50] What is Constitutional AI?
+[v2 50/50] What are common AI safety concerns with LLMs?
+  v1/faithfulness: 0.9508
+  v1/answer_relevancy: 0.9172
+  v1/context_recall: 1.0000
+  v1/context_precision: 0.9450
+  v2/faithfulness: 0.9935
+  v2/answer_relevancy: 0.8742
+  v2/context_recall: 1.0000
+  v2/context_precision: 0.9417
+
+Metric                               V1       V2 Winner
+faithfulness                     0.9508   0.9935 V2
+answer_relevancy                 0.9172   0.8742 V1
+context_recall                   1.0000   1.0000 Tie
+context_precision                0.9450   0.9417 V1
+✅ Đã lưu báo cáo. target_met=True
