@@ -28,3 +28,11 @@ env/
 
 # Lab outputs (không commit, chỉ nộp evidence/)
 data/ragas_report.json
+
+# Local runtime artifacts
+install.log
+data/rag_outputs_*.json
+data/ragas_*_per_sample.json
+.pytest_cache/
+run_all.log
+refinement.log
