@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-08T05:02:32.403571+00:00",
+  "project_name": "day22-dangthevinh-2a202602587",
+  "project_url": "https://smith.langchain.com/o/080078b4-7f91-44a6-8306-dab808064625/projects/p/10197647-1ce8-431c-bf21-7aa6e17e9313",
+  "successful_root_queries": {
+    "rag-query": 50,
+    "ab-rag-query": 100
+  },
+  "queries_with_context_and_answer": {
+    "rag-query": 50,
+    "ab-rag-query": 100
+  },
+  "example_run_ids": {
+    "ab-rag-query": "01a119db-84ed-77d2-ae68-4df07a34ef14",
+    "rag-query": "01a119cc-713a-7563-b5c3-bbcea38bfd95"
+  },
+  "target_met": true
+}
