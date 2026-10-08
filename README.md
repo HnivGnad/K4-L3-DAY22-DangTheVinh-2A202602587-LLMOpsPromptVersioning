@@ -171,3 +171,55 @@ Tệp `.env` chứa API key nhạy cảm. Đảm bảo `.gitignore` đã có dò
 | Guardrails AI               | https://www.guardrailsai.com/docs                                  |
 | FAISS (Facebook AI)         | https://faiss.ai                                                   |
 | LangChain FAISS Integration | https://python.langchain.com/docs/integrations/vectorstores/faiss  |
+
+---
+
+## Bài làm DangTheVinh — 2A202602587
+
+Tên project mặc định: day22-dangthevinh-2a202602587 (có thể ghi đè trong .env). Prompt riêng và hai prompt dùng chung ở src/prompts.py; bước 3 pull hai prompt từ Hub để đánh giá đúng phiên bản đang sử dụng. Bước 1 trả context và answer vào trace gốc. Bước 2 lưu request ID, nhãn v1/v2 và câu trả lời trong log.
+
+### Chạy trên Windows PowerShell
+
+```powershell
+$env:PYTHONUTF8 = "1"
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+# Điền .env: LANGCHAIN_API_KEY, PROVIDER, key tương ứng.
+# Với anthropic/openrouter cần thêm OPENAI_API_KEY cho embeddings.
+.\.venv\Scripts\python.exe src/config.py
+.\.venv\Scripts\python.exe src/run_all.py
+```
+
+Bước 4 không cần API key:
+
+```powershell
+.\.venv\Scripts\python.exe src/run_all.py --step 4
+```
+
+Log A/B, hai log Guardrails và bản sao báo cáo RAGAS trong evidence/ được tự lưu UTF-8. Khi RAGAS hoàn thành, evidence/03_analysis.md chứa bảng chênh lệch và phân tích V1/V2; các điểm mẫu và answers/contexts được lưu local trong data/. Runner trả exit code khác 0 khi một bước thất bại.
+
+### Kiểm tra local
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m pip check
+```
+
+Tests dùng FAISS thật và fixture LLM/embeddings tại máy; tracing tắt. Tests không thay thế 100 traces hoặc đánh giá RAGAS trên model thật. Guardrails tự viết bốn loại PII và sửa fences, nháy đơn, trailing commas; bảo toàn apostrophe/dấu phẩy trong string và có JSON dự phòng.
+
+Screenshot sẽ bổ sung sau. Để hoàn tất nộp bài cần chạy bước 1–3 với .env hợp lệ, kiểm tra ≥100 root traces, điền URL project LangSmith thật và bổ sung ba ảnh theo SUBMISSION.md.
+
+Bộ thư viện dùng LangChain 1.x cho yêu cầu của Guardrails 0.11; riêng langchain-community==0.3.31 giữ import tương thích với RAGAS. API chính thức: [RAGAS evaluate](https://docs.ragas.io/en/stable/references/evaluate/), [LangSmith push_prompt](https://reference.langchain.com/python/langsmith/client/Client/push_prompt).
+### Link nộp và audit
+
+- [GitHub public](https://github.com/HnivGnad/K4-L3-DAY22-DangTheVinh-2A202602587-LLMOpsPromptVersioning)
+- [Project LangSmith](https://smith.langchain.com/o/080078b4-7f91-44a6-8306-dab808064625/projects/p/10197647-1ce8-431c-bf21-7aa6e17e9313)
+- Giải thích code: [STUDY_NOTES.md](STUDY_NOTES.md)
+- Bộ phiên bản đã cài: requirements.lock.txt (cài bằng pip install -r requirements.lock.txt).
+
+```powershell
+.\.venv\Scripts\python.exe src/verify_langsmith.py
+.\.venv\Scripts\python.exe src/verify_submission.py --skip-screenshots
+```
+
+verify_langsmith.py kiểm tra trực tiếp trên server ≥50 root queries thành công có context/answer cho mỗi bước, lưu evidence/01_langsmith_verification.json. Bỏ --skip-screenshots khi kiểm tra bản nộp cuối.
